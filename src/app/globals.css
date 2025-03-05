@@ -15,7 +15,53 @@
 }
 
 body {
-  color: var(--foreground);
+  color: #000000;
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body.gray-theme {
+  background-color: #f5f5f5; 
+  color: #000000;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
 }
