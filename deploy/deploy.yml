@@ -1,0 +1,22 @@
+- hosts: webserver
+  tasks:
+    - name: Cloner le projet
+      git:
+        repo: 'https://github.com/ArnoldTch/devoir_tailwind_webapp.git'
+        dest: /home/ubuntu/devoir_tailwind_webapp
+        version: main
+
+    - name: Installer les dépendances
+      command: npm install
+      args:
+        chdir: /home/ubuntu/devoir_tailwind_webapp
+
+    - name: Générer le build
+      command: npm run build
+      args:
+        chdir: /home/ubuntu/devoir_tailwind_webapp
+
+    - name: Lancer Next.js en mode production
+      command: npm start
+      args:
+        chdir: /home/ubuntu/devoir_tailwind_webapp
